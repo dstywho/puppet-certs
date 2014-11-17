@@ -10,6 +10,8 @@ rescue LoadError
 end
 
 PuppetLint.configuration.send("disable_80chars")
+PuppetLint.configuration.send("disable_documentation")
+PuppetLint.configuration.send("disable_arrow_alignment")
 PuppetLint.configuration.log_format = "%{path}:%{linenumber}:%{check}:%{KIND}:%{message}"
 PuppetLint.configuration.fail_on_warnings = true
 
